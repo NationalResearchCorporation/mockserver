@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.description = 'A Ruby Client for MockServer that enables easy mocking of any system you integrate with via HTTP or HTTPS (i.e. services, web sites, etc)'
 
   spec.required_ruby_version     = '>= 2.0'
-  spec.required_rubygems_version = '~> 2.0'
+  spec.required_rubygems_version = '>= 2.0'
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(/^bin\//) { |f| File.basename(f) }
@@ -28,11 +28,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop', '~> 0.23'
 
   spec.add_dependency 'hashie', '~> 3.0'
-  spec.add_dependency 'json', '~> 1.8'
-  spec.add_dependency 'json_pure', '~> 1.8'
-  spec.add_dependency 'activesupport', '~> 4.1'
-  spec.add_dependency 'rest-client', '~> 1.7'
+  spec.add_dependency 'json', '>= 1.8'
+  spec.add_dependency 'activesupport', '>= 4.1'
+  spec.add_dependency 'rest-client', '>= 1.7'
   spec.add_dependency 'logging_factory', '~> 0.0.2'
-  spec.add_dependency 'thor', '~> 0.19'
+  spec.add_dependency 'thor', '~> 1.0'
   spec.add_dependency 'colorize', '~> 0.7'
 end
